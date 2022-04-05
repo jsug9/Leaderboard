@@ -28,7 +28,7 @@ h2 {
   justify-content: space-between;
 }
 
-#refresh-button{
+#refresh-button {
   padding: 0.3rem 1rem;
   font-weight: bold;
   font-size: 15px;
@@ -56,7 +56,7 @@ h2 {
 }
 
 .score:nth-child(even) {
-  background: #dddddd;
+  background: #ddd;
 }
 
 /* Add your Score */

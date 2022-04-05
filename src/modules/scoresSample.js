@@ -1,24 +1,24 @@
 const scoresSample = [
   {
-    name: "Name",
+    name: 'Name',
     score: 100,
   },
   {
-    name: "Name",
+    name: 'Name',
     score: 20,
   },
   {
-    name: "Name",
+    name: 'Name',
     score: 40,
   },
   {
-    name: "Name",
+    name: 'Name',
     score: 32,
   },
   {
-    name: "Name",
+    name: 'Name',
     score: 18,
   },
-]
+];
 
-export { scoresSample };
+export default scoresSample;
