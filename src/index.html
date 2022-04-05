@@ -22,31 +22,31 @@
 
     <main>
       <section id="scores-section">
-        <div class="title">
+        <div class="title-div">
           <h2>Recent Scores</h2>
-          <button>Refresh</button>
+          <button id="refresh-button">Refresh</button>
         </div>
         <div id="scores-container">
           <div class="score">
-            <p>Name: 100</p>
+            <p class="score-text">Name: 100</p>
           </div>
           <div class="score">
-            <p>Name: 100</p>
+            <p class="score-text">Name: 100</p>
           </div>
           <div class="score">
-            <p>Name: 100</p>
+            <p class="score-text">Name: 100</p>
           </div>
           <div class="score">
-            <p>Name: 100</p>
+            <p class="score-text">Name: 100</p>
           </div>
         </div>
       </section>
   
       <section id="add-scores-section">
-        <div class="title">
+        <div class="title-div">
           <h2>Add your score</h2>
         </div>
-        <form action="">
+        <form id="form">
           <input
           type="text"
           placeholder="Your name"
@@ -55,7 +55,7 @@
           required
         />
         <input
-          type="text"
+          type="number"
           placeholder="Your score"
           id="score"
           class="form-input"
