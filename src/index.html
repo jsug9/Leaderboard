@@ -17,15 +17,40 @@
 
   <body id="body">
     <header>
-      <navbar></navbar>
+      <h1>Leaderboard</h1>
     </header>
 
-    <section>
-
-    </section>
-
-    <footer>
-
-    </footer>
+    <main>
+      <section id="scores-section">
+        <div class="title-div">
+          <h2>Recent Scores</h2>
+          <button type="button" id="refresh-button">Refresh</button>
+        </div>
+        <div id="scores-container"></div>
+      </section>
+  
+      <section id="add-scores-section">
+        <div class="title-div">
+          <h2>Add your score</h2>
+        </div>
+        <form id="form">
+          <input
+          type="text"
+          placeholder="Your name"
+          id="name"
+          class="form-input"
+          required
+        />
+        <input
+          type="number"
+          placeholder="Your score"
+          id="score"
+          class="form-input"
+          required
+        />
+        <input type="submit" value="Submit" id="submit" />
+        </form>
+      </section>
+    </main>
   </body>
 </html>
