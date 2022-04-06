@@ -1,6 +1,8 @@
 const id = 'myGame';
 const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
 
+// This code was used initially to generate a key, it is actually no longer needed.
+
 const createGame = async () => {
   const response = await fetch(baseURL, {
     method: 'POST',
@@ -9,11 +11,6 @@ const createGame = async () => {
     },
     body: JSON.stringify(id),
   });
-
-  if (!response.ok) {
-    const message = `An error has occured: ${response.status}`;
-    throw new Error(message);
-  }
 
   const game = await response.json();
   return game;
