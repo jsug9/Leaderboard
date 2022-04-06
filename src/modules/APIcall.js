@@ -4,7 +4,8 @@ const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/game
 
 const createDiv = (scores) => {
   scoresContainer.innerHTML = '';
-  scores.forEach((score) => {
+  const sortedScores = scores.sort((a, b) => b.score - a.score);
+  sortedScores.forEach((score) => {
     const scoreContainer = `
       <div class="score">
         <p class="score-text">${score.user}: ${score.score}</p>
@@ -13,8 +14,6 @@ const createDiv = (scores) => {
     scoresContainer.innerHTML += scoreContainer;
   });
 };
-
-const sortScores = (array) => array.sort((a, b) => b.score - a.score);
 
 // Scores
 const getScores = async () => {
@@ -27,7 +26,7 @@ const addScore = async () => {
   const response = await fetch(url, {
     method: 'POST',
     headers: {
-      'Content-type': 'application/json; charset=UTF-8',
+      'Content-type': 'application/json',
     },
     body: JSON.stringify({
       user: formName.value,
@@ -40,8 +39,7 @@ const addScore = async () => {
 };
 
 const loadScores = () => {
-  getScores().then((scoresList) => {
-    const scores = sortScores(scoresList);
+  getScores().then((scores) => {
     createDiv(scores);
   });
 };
