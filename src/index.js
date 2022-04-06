@@ -7,7 +7,7 @@ loadScores();
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   addScore();
-  document.getElementById('form').reset();
+  form.reset();
 });
 
 refreshButton.addEventListener('click', () => {

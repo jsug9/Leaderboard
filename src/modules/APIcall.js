@@ -1,6 +1,6 @@
 import { scoresContainer, formName, formScore } from './htmlElements.js';
 
-const scoreURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/enuSmmGLNQXzHU49kR78/scores/';
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/enuSmmGLNQXzHU49kR78/scores/';
 
 const createDiv = (scores) => {
   scoresContainer.innerHTML = '';
@@ -18,24 +18,21 @@ const sortScores = (array) => array.sort((a, b) => b.score - a.score);
 
 // Scores
 const getScores = async () => {
-  const response = await fetch(scoreURL);
-
+  const response = await fetch(url);
   const scores = await response.json();
   return scores.result;
 };
 
 const addScore = async () => {
-  const newScore = {
-    user: formName.value,
-    score: parseInt(formScore.value, 10),
-  };
-
-  const response = await fetch(scoreURL, {
+  const response = await fetch(url, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-    body: JSON.stringify(newScore),
+    body: JSON.stringify({
+      user: formName.value,
+      score: formScore.value,
+    }),
   });
 
   const status = await response.json();
@@ -43,8 +40,8 @@ const addScore = async () => {
 };
 
 const loadScores = () => {
-  getScores().then((listScore) => {
-    const scores = sortScores(listScore);
+  getScores().then((scoresList) => {
+    const scores = sortScores(scoresList);
     createDiv(scores);
   });
 };
