@@ -32,7 +32,9 @@
     "watch": "webpack --watch",
     "build": "webpack",
     "start": "webpack serve --open",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "linters": "npx eslint . && npx stylelint **/*.{css,scss} && npx hint .",
+    "lintersfix": "npx eslint ./src --fix && npx stylelint **/*.{css,scss} --fix"
   },
   "repository": {
     "type": "git",
