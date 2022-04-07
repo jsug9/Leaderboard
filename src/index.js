@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 import { form, refreshButton } from './modules/htmlElements.js';
 import { addScore, loadScores } from './modules/APIcall.js';
 

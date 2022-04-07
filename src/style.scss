@@ -1,15 +1,13 @@
-:root {
-  --backgroundSoftDark: #485f78;
-  --backgroundSoftLight: #bbd4f0;
-  --backgroundDark: #6facc1;
-  --backgroundLight: #d7eef6;
-  --darkHover: #638894;
-  --darkActive: #6facc1;
-  --lightHover: #d7eef6;
-  --lightActive: #6facc1;
-  --borderLight: 4px solid #88afdb;
-  --borderDark: 4px solid #1e3856;
-}
+$backgroundSoftDark: #485f78;
+$backgroundSoftLight: #bbd4f0;
+$backgroundDark: #6facc1;
+$backgroundLight: #d7eef6;
+$darkHover: #638894;
+$darkActive: #6facc1;
+$lightHover: #d7eef6;
+$lightActive: #6facc1;
+$borderLight: 4px solid #88afdb;
+$borderDark: 4px solid #1e3856;
 
 header {
   display: flex;
@@ -111,15 +109,15 @@ h2 {
   }
 
   #scores-container {
-    border: var(--borderDark);
+    border: $borderDark;
   }
 
   .score:nth-child(odd) {
-    background: var(--backgroundDark);
+    background: $backgroundDark;
   }
 
   .score:nth-child(even) {
-    background: var(--backgroundSoftDark);
+    background: $backgroundSoftDark;
   }
 
   h1,
@@ -129,8 +127,8 @@ h2 {
   }
 
   .form-input {
-    border: var(--borderDark);
-    background: var(--backgroundDark);
+    border: $borderDark;
+    background: $backgroundDark;
   }
 
   ::placeholder {
@@ -140,40 +138,39 @@ h2 {
 
   #refresh-button,
   #submit {
-    border: var(--borderDark);
-    background-color: var(--backgroundSoftDark);
+    border: $borderDark;
+    background-color: $backgroundSoftDark;
     color: white;
   }
 
   #refresh-button:hover,
   #submit:hover {
-    background: var(--darkHover);
+    background: $darkHover;
     color: white;
   }
 
   #refresh-button:active,
   #submit:active {
-    background: var(--darkActive);
+    background: $darkActive;
     color: white;
   }
 }
 
 @media (prefers-color-scheme: light) {
-  /* Light theme styles go here */
   body {
     background-color: white;
   }
 
   #scores-container {
-    border: var(--borderLight);
+    border: $borderLight;
   }
 
   .score:nth-child(odd) {
-    background: var(--backgroundLight);
+    background: $backgroundLight;
   }
 
   .score:nth-child(even) {
-    background: var(--backgroundSoftLight);
+    background: $backgroundSoftLight;
   }
 
   h1,
@@ -183,25 +180,25 @@ h2 {
   }
 
   .form-input {
-    border: var(--borderLight);
+    border: $borderLight;
     background: white;
   }
 
   #refresh-button,
   #submit {
-    border: var(--borderLight);
+    border: $borderLight;
     background-color: white;
   }
 
   #refresh-button:hover,
   #submit:hover {
-    background: var(--lightHover);
+    background: $lightHover;
     color: black;
   }
 
   #refresh-button:active,
   #submit:active {
-    background: var(--lightActive);
+    background: $lightActive;
     color: black;
   }
 }
